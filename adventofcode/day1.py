@@ -1,4 +1,4 @@
-from inputs.reader import read_file
+from adventofcode.inputs import reader
 
 
 def solve_part_one(puzzle: list) -> int:
@@ -40,17 +40,8 @@ def convert_and_sort(str_input: list) -> list:
     return int_input
 
 
-def test_part_one():
-    puzzle = ["1721", "979", "366", "299", "675", "1456"]
-    assert solve_part_one(puzzle) == 514579
-
-
-def test_part_two():
-    puzzle = ["1721", "979", "366", "299", "675", "1456"]
-    assert solve_part_two(puzzle) == 241861950
-
-
 if __name__ == '__main__':
-    puzzle_input = read_file('inputs/day1.txt')
+    puzzle_input = reader.read_file('adventofcode/inputs/day1.txt')
     solution_one = solve_part_one(puzzle_input)
     solution_two = solve_part_two(puzzle_input)
+
